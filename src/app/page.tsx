@@ -1,103 +1,183 @@
-import Image from "next/image";
+// src/app/page.tsx
 
-export default function Home() {
+export default function Home(){
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+    <main className="flex flex-col">
+      {/* ---------------- Hero ---------------- */}
+      <section className="relative bg-gradient-to-br from-blue-600 to-blue-400 text-white overflow-hidden">
+        <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center px-6 py-20 lg:py-32">
+          {/* Texto */}
+          <div className="w-full lg:w-1/2">
+            <h1 className="text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
+              Creamos software y sitios web <br className="hidden md:block" />
+              que impulsan tu negocio
+            </h1>
+            <p className="text-lg lg:text-xl mb-8">
+              Desde páginas corporativas y tiendas en línea hasta sistemas
+              especializados. Soluciones a medida, bilingües y optimizadas
+              para la región fronteriza.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="/portfolio"
+                className="inline-block bg-white text-blue-600 font-semibold px-6 py-3 rounded-xl shadow hover:bg-gray-100 transition"
+              >
+                Ver Portafolio
+              </a>
+              <a
+                href="/pricing"
+                className="inline-block border-2 border-white text-white font-semibold px-6 py-3 rounded-xl hover:bg-white hover:text-blue-600 transition text-center"
+              >
+                Paquetes y Precios
+              </a>
+            </div>
+          </div>
+          {/* Imagen Hero */}
+          <div className="w-full lg:w-1/2 mb-8 lg:mb-0 flex justify-center">
+            <img
+              src="/images/hero-devices.png"
+              alt="Desarrollo web y software"
+              className="w-full max-w-md rounded-xl shadow-lg"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          </div>
+        </div>
+        {/* SVG decorativo en la base del hero */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg
+            viewBox="0 0 1440 120"
+            className="w-full h-20 text-white"
+            preserveAspectRatio="none"
           >
-            Read our docs
+            <path
+              fill="currentColor"
+              d="M0,0 C480,100 960,20 1440,80 L1440,120 L0,120 Z"
+            />
+          </svg>
+        </div>
+      </section>
+
+      {/* --------------- Sobre Nosotros --------------- */}
+      <section className="bg-white py-16 px-6">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+            ¿Quiénes Somos?
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Somos <span className="font-semibold">Agencia Web CJ</span>, un equipo
+            especializado en el desarrollo de software, páginas web, sistemas
+            a la medida y tiendas en línea. Con base en Ciudad Juárez, ofrecemos
+            soluciones bilingües (ES/EN) y adaptadas al mercado fronterizo,
+            optimizando costos de impuestos (IVA 8 %) y métodos de pago locales.
+          </p>
+        </div>
+      </section>
+
+      {/* -------------- Servicios Destacados -------------- */}
+      <section className="bg-gray-50 py-16 px-6">
+        <div className="max-w-5xl mx-auto text-center mb-12">
+          <h2 className="text-3xl lg:text-4xl font-bold">Nuestros Servicios</h2>
+          <p className="text-gray-600 mt-4">
+            Ofrecemos un portafolio completo para cubrir todas tus necesidades
+            digitales.
+          </p>
+        </div>
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Servicio 1 */}
+          <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition">
+            <h3 className="text-2xl font-semibold mb-4">Desarrollo Web</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Sitios corporativos, landing pages y portales bilingües.
+            </p>
+          </div>
+          {/* Servicio 2 */}
+          <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition">
+            <h3 className="text-2xl font-semibold mb-4">E-commerce</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Tiendas en línea con integración de Stripe, PayPal y Oxxo Pay,
+              optimizadas con IVA 8 %.
+            </p>
+          </div>
+          {/* Servicio 3 */}
+          <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition">
+            <h3 className="text-2xl font-semibold mb-4">Sistemas Especializados</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Software a la medida, automatización de procesos y dashboards
+              para PyMEs industriales.
+            </p>
+          </div>
+          {/* Servicio 4 */}
+          <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition">
+            <h3 className="text-2xl font-semibold mb-4">Mantenimiento y Soporte</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Hosting, actualizaciones y soporte 24/7 para tu infraestructura.
+            </p>
+          </div>
+          {/* Servicio 5 */}
+          <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition">
+            <h3 className="text-2xl font-semibold mb-4">UI/UX y Diseño</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Interfaces atractivas y usables, pruebas de usuario y optimización
+              de conversión.
+            </p>
+          </div>
+          {/* Servicio 6 */}
+          <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition">
+            <h3 className="text-2xl font-semibold mb-4">SEO Local y Marketing</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Estrategias SEO/SEM para atraer clientes de El Paso, NM y la
+              franja fronteriza.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ------------- Llamado a Portafolio ------------- */}
+      <section className="bg-white py-16 px-6">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+            ¿Quieres Ver Nuestros Proyectos?
+          </h2>
+          <p className="text-gray-700 mb-8">
+            Conoce algunos de los trabajos que hemos desarrollado para empresas
+            locales e internacionales.
+          </p>
+          <a
+            href="/portfolio"
+            className="inline-block bg-blue-600 text-white font-semibold px-8 py-4 rounded-2xl shadow hover:bg-blue-700 transition"
+          >
+            Ir al Portafolio
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* -------------- Footer Simplificado -------------- */}
+      <footer className="bg-gray-800 text-gray-300 py-10 px-6">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between">
+          <p className="text-sm text-center lg:text-left">
+            &copy; 2025 Agencia Web CJ. Todos los derechos reservados.
+          </p>
+          <div className="flex space-x-6 mt-6 lg:mt-0">
+            <a href="https://facebook.com" aria-label="Facebook" className="hover:text-white">
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22 12a10 10 0 10-11.547 9.876v-6.99h-2.64v-2.886h2.64V9.578c0-2.605 1.553-4.043 3.932-4.043 1.14 0 2.333.204 2.333.204v2.568h-1.317c-1.3 0-1.705.805-1.705 1.632v1.962h2.902l-.464 2.886h-2.438v6.99A10.002 10.002 0 0022 12z" />
+              </svg>
+            </a>
+            <a href="https://twitter.com" aria-label="Twitter" className="hover:text-white">
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.534 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com" aria-label="LinkedIn" className="hover:text-white">
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z" />
+                <rect width="4" height="12" x="2" y="9" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+          </div>
+        </div>
       </footer>
-    </div>
+    </main>
   );
 }
+
