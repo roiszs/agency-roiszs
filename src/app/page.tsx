@@ -4,7 +4,7 @@ export default function Home(){
   return (
     <main className="flex flex-col">
       {/* ---------------- Hero ---------------- */}
-      <section className="relative bg-gradient-to-br from-blue-600 to-blue-400 text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-purple-600 to-purple-400 text-white overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center px-6 py-20 lg:py-32">
           {/* Texto */}
           <div className="w-full lg:w-1/2">
@@ -20,13 +20,13 @@ export default function Home(){
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="/portfolio"
-                className="inline-block bg-white text-blue-600 font-semibold px-6 py-3 rounded-xl shadow hover:bg-gray-100 transition"
+                className="inline-block bg-white text-purple-600 font-semibold px-6 py-3 rounded-xl shadow hover:bg-gray-100 transition"
               >
                 Ver Portafolio
               </a>
               <a
                 href="/pricing"
-                className="inline-block border-2 border-white text-white font-semibold px-6 py-3 rounded-xl hover:bg-white hover:text-blue-600 transition text-center"
+                className="inline-block border-2 border-white text-white font-semibold px-6 py-3 rounded-xl hover:bg-white hover:text-purple-600 transition text-center"
               >
                 Paquetes y Precios
               </a>
@@ -143,7 +143,7 @@ export default function Home(){
           </p>
           <a
             href="/portfolio"
-            className="inline-block bg-blue-600 text-white font-semibold px-8 py-4 rounded-2xl shadow hover:bg-blue-700 transition"
+            className="inline-block bg-purple-600 text-white font-semibold px-8 py-4 rounded-2xl shadow hover:bg-purple-700 transition"
           >
             Ir al Portafolio
           </a>
@@ -151,7 +151,7 @@ export default function Home(){
       </section>
 
       {/* -------------- Footer Simplificado -------------- */}
-      <footer className="bg-gray-800 text-gray-300 py-10 px-6">
+      <footer className="bg-purple-800 text-purple-300 py-10 px-6">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between">
           <p className="text-sm text-center lg:text-left">
             &copy; 2025 Agencia Web CJ. Todos los derechos reservados.
