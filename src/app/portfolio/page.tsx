@@ -33,7 +33,7 @@ export default function PortfolioPage() {
       <div className="max-w-5xl mx-auto mb-8">
         <Link
           href="/"
-          className="inline-block text-blue-600 font-semibold hover:underline"
+          className="inline-block text-purple-600 font-semibold hover:underline"
         >
           ← Volver al Home
         </Link>
