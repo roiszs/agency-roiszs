@@ -1,5 +1,6 @@
 // src/app/portfolio/page.tsx
 
+import Link from "next/link";
 import { ProjectCard } from "@/components/ProjectCard";
 
 export default function PortfolioPage() {
@@ -28,6 +29,16 @@ export default function PortfolioPage() {
 
   return (
     <main className="bg-gray-50 py-16 px-6">
+      {/* ====== Enlace para volver al Home ====== */}
+      <div className="max-w-5xl mx-auto mb-8">
+        <Link
+          href="/"
+          className="inline-block text-blue-600 font-semibold hover:underline"
+        >
+          ← Volver al Home
+        </Link>
+      </div>
+
       <div className="max-w-5xl mx-auto text-center mb-12">
         <h1 className="text-4xl font-bold">Portafolio</h1>
         <p className="text-gray-600 mt-4">
