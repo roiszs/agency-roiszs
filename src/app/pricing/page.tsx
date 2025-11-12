@@ -67,7 +67,7 @@ export default function PricingPage() {
         <p className="text-gray-600 mt-4">
           Elige el plan que mejor se adapte a tus necesidades. Todos nuestros
           planes incluyen diseño responsive, optimización para la región
-          fronteriza y atención bilingüe ES/EN.
+          fronteriza, pagina bilingües ES/EN y soporte de un mes.
         </p>
       </section>
 
