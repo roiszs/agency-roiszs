@@ -7,10 +7,10 @@ export default function PortfolioPage() {
   // Ejemplo de datos; cuando tengas tus proyectos, reemplaza o agrega aquí
   const proyectos = [
     {
-      title: "Tienda Online Café Barrio",
+      title: "North Bridge",
       description: "E-commerce bilingüe con integración de pagos Oxxo Pay y Stripe.",
-      imgSrc: "/images/proyectos/cafe-barrio.jpg",
-      link: "/portfolio/cafe-barrio",
+      imgSrc: "NorthBridge Consulting ayuda a PyMEs y empresas en crecimiento a alinear sus objetivos con proyectos de transformación digital medibles y accionables.",
+      link: "https://northbridge-landing.vercel.app/",
     },
     {
       title: "Dashboard Manufactura J&J",
