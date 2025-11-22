@@ -9,8 +9,8 @@ export default function PortfolioPage() {
     {
       title: "North Bridge",
       description: "NorthBridge Consulting ayuda a PyMEs y empresas en crecimiento a alinear sus objetivos con proyectos de transformación digital medibles y accionables.",
-      imgSrc: "/images/proyectos/NorthImage.png",
-      link: "https://northbridge-landing.vercel.app/",
+      imgSrc: "/images/NorthImage.png",
+      link: "https://northbridge-tan.vercel.app/",
     },
     {
       title: "Dashboard Manufactura J&J",
